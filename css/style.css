@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 1rem;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 12px 12px 50px 1px rgba(0, 0, 0, 0.2);
+}
+.card .image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .image img {
+  width: 100%;
+  display: block;
+}
+.card .image-overlay {
+  background-color: hsla(178, 100%, 50%, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.card .image-overlay img {
+  width: 17%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .image:hover .image-overlay {
+  display: block;
+  cursor: pointer;
+}
+.card .text-box {
+  padding-top: 25px;
+}
+.card .text-box a {
+  font-weight: 600;
+  margin: 15px 0;
+  font-size: 22px;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.card .text-box a:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+.card .text-box .paragraph {
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  padding: 25px 0;
+}
+.card .text-box .price-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+.card .text-box .price-box img {
+  margin-right: 7px;
+}
+.card .text-box .price-box .price {
+  display: flex;
+  align-items: center;
+}
+.card .text-box .price-box .price p {
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+}
+.card .text-box .price-box .timer {
+  display: flex;
+  align-items: center;
+}
+.card .text-box .price-box .timer p {
+  color: hsl(215, 51%, 70%);
+}
+.card .text-box .author-box {
+  display: flex;
+  align-items: center;
+  border-top: solid 1px hsl(215, 32%, 27%);
+  justify-content: flex-start;
+  margin: 0;
+  padding: 15px 0 0 0;
+}
+.card .text-box .author-box img {
+  width: 30px;
+  border-radius: 50%;
+  border: solid 1px hsl(215, 51%, 70%);
+}
+.card .text-box .author-box p {
+  padding: 0 0 0 15px;
+  font-size: 16px;
+  color: hsl(215, 51%, 70%);
+}
+.card .text-box .author-box a {
+  font-weight: 400;
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+}
+.card .text-box .author-box a:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}

@@ -1,0 +1,154 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $dark-blue-bg;
+  font-family: $font-main;
+  font-size: 18px;
+  color: $white;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 1rem;
+}
+
+.card {
+  background-color: $dark-blue-card;
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 12px 12px 50px 1px rgba(0, 0, 0, 0.2);
+
+  .image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    &-overlay {
+      background-color: $cyan-hover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: none;
+
+      img {
+        width: 17%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .image:hover {
+    .image-overlay {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .text-box {
+    padding-top: 25px;
+    // display: flex;
+    // flex-direction: column;
+
+    a {
+      font-weight: 600;
+      margin: 15px 0;
+      font-size: 22px;
+      color: $white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
+
+    .paragraph {
+      font-weight: 300;
+      color: $soft-blue;
+      padding: 25px 0;
+    }
+
+    .price-box {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      font-size: 15px;
+
+      img {
+        margin-right: 7px;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-weight: 600;
+          color: $cyan;
+        }
+      }
+
+      .timer {
+        display: flex;
+        align-items: center;
+
+        p {
+          color: $soft-blue;
+        }
+      }
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      border-top: solid 1px $dark-blue-line;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 15px 0 0 0;
+
+      img {
+        width: 30px;
+        border-radius: 50%;
+        border: solid 1px $soft-blue;
+      }
+
+      p {
+        padding: 0 0 0 15px;
+        font-size: 16px;
+        color: $soft-blue;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 15px;
+        color: $white;
+      }
+
+      a:hover {
+        color: $cyan;
+        cursor: pointer;
+      }
+    }
+  }
+}
